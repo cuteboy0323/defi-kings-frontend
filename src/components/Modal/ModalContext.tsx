@@ -54,7 +54,7 @@ const ModalProvider: React.FC<ModalProviderProps> = ({ children }) => {
                 {React.isValidElement(modalNode) &&
                     React.cloneElement(modalNode, {
                         onDismiss: handleDismiss
-                    })}
+                    } as any)}
             </Dialog>
             {children}
         </Context.Provider>
